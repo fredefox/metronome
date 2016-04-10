@@ -1,0 +1,41 @@
+<style>
+.indicator {
+    background-color: darkorange;
+    height: 2ch;
+    width: 2ch;
+}
+.indicator.pulse {
+    background-color: dimgray;
+}
+.inputs > * {
+    display: inline-block;
+}
+.input-group {
+    margin-bottom: 1ch;
+}
+.input-group > label,
+.input-group > input {
+    width: 50%;
+}
+</style>
+  <div class="inputs">
+    <div>
+      <div class="input-group">
+        <label>Beats Per Minute</label>
+        <input ng-model="metronome.bpm" type="number"
+          style="width: 4em;"/>
+      </div>
+      <div class="input-group">
+        <label>Time Signature</label>
+        <input ng-model="metronome.signature.numerator" type="number"
+          style="width: 2em;"/>
+        <input ng-model="metronome.signature.denominator" type="number"
+          style="width: 2em;"/>
+      </div>
+    </div>
+    <div>
+        <button ng-click="start()">Start</button>
+        <div class="indicator"></div>
+    </div>
+  </div>
+  <object data="http://fredefox.github.io/curriculum/assets/fredefox.svg"></object>
